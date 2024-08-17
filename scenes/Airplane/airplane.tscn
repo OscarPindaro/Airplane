@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://d38jnrljpjkts"]
+
+[ext_resource type="Script" path="res://scenes/Draw/Line2DDraw.gd" id="1_7ok2y"]
+[ext_resource type="Script" path="res://scenes/Airplane/airplane.gd" id="1_cerku"]
+[ext_resource type="Script" path="res://scenes/Airplane/airplane_movement.gd" id="3_13vly"]
+
+[node name="Airplane" type="CharacterBody2D"]
+velocity = Vector2(68.2095, 188.009)
+script = ExtResource("1_cerku")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -32, -24, 32, 0, 16, 24, 32)
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(0, -32, -24, 32, 0, 16, 24, 32)
+closed = true
+width = 2.0
+default_color = Color(0.0646965, 0.0646965, 0.0646965, 1)
+joint_mode = 2
+antialiased = true
+script = ExtResource("1_7ok2y")
+inner_color = Color(0.821789, 0.821789, 0.821789, 1)
+
+[node name="Movement" type="Node" parent="."]
+script = ExtResource("3_13vly")
+angular_velocity = 3.0
+linear_velocity = 300
+look_at = null
