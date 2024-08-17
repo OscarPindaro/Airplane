@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://3yw2hc72c1xb"]
+
+[ext_resource type="PackedScene" uid="uid://cj6fdm7yy0k4b" path="res://scenes/Map/Map.tscn" id="1_1tgsw"]
+[ext_resource type="PackedScene" uid="uid://d38jnrljpjkts" path="res://scenes/Airplane/airplane.tscn" id="2_2r4wy"]
+
+[node name="Main" type="Node"]
+
+[node name="Map" parent="." instance=ExtResource("1_1tgsw")]
+
+[node name="Airplane" parent="." instance=ExtResource("2_2r4wy")]
+position = Vector2(271, 358)
